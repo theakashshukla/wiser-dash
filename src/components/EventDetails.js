@@ -13,14 +13,8 @@ const EventDetails = () => {
       description: "Description 1",
       date: "2023-11-01",
       time: "19:00",
-      duration: 60,
-      guests: [
-        {
-          id: 1,
-          name: "Guest 1",
-          email: "test@gmail.com",
-        },
-      ],
+      count: 80,
+      minCount: 90,
     },
     {
       id: 2,
@@ -28,19 +22,8 @@ const EventDetails = () => {
       description: "Description 2",
       date: "2023-08-02",
       time: "5:00",
-      duration: 60,
-      guests: [
-        {
-          id: 1,
-          name: "Guest 1",
-          email: "test2@gmail.com",
-        },
-        {
-          id: 2,
-          name: "Guest 2",
-          email: "test3@gmail.com",
-        },
-      ],
+      count: 70,
+      minCount: 60,
     },
     {
       id: 3,
@@ -48,14 +31,8 @@ const EventDetails = () => {
       description: "Description 2",
       date: "2023-12-02",
       time: "10:00",
-      duration: 60,
-      guests: [
-        {
-          id: 1,
-          name: "Guest 1",
-          email: "test2@gmail.com",
-        },
-      ],
+      count: 60,
+      minCount: 40,
     },
   ];
 
@@ -120,18 +97,9 @@ const EventDetails = () => {
         </div>
 
         <div className="my-1 border-t border-b border-gray-300"></div>
-        <p>{event.description}</p>
-        <p>Duration: {event.duration} minutes</p>
-        <div>
-          <h3>Guests:</h3>
-          <ul>
-            {event.guests.map((guest) => (
-              <li key={guest.id}>
-                {guest.name} - {guest.email}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <p>{event.count}</p>
+        <p>{event.minCount} </p>
+        
       </div>
     </div>
   );

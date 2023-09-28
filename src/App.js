@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import BottomNavigation from "./components/BottomNavigation";
 import EventCardList from "./components/EventCardList";
 import EventDetails from "./components/EventDetails";
-import Header from './components/Header';
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
+            <div className="container mx-auto rounded-xl shadow border p-4">
               <EventCardList />
             </div>
           }

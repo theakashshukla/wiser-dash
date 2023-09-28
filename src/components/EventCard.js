@@ -20,20 +20,33 @@ const EventCard = ({ event }) => {
   return (
     <Link to={`/event/${event.id}`} className="hover:border-blue-800">
       <div className="w-196 h-374 border border-gray-300 rounded-lg p-4 mb-5">
-      <div className="flex justify-between items-center mb-1">
+        <div className="flex justify-between items-center mb-1">
           <div>
             <h1 className="font-bold text-blue-500 text-2xl">{event.title}</h1>
+            <p className="text-gray-800 text-sm">Host Name</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-800 text-sm"><p>{formattedDate}</p></p>
+            <p className="font-semibold text-gray-800 text-sm">
+              <p>{formattedDate}</p>
+            </p>
           </div>
         </div>
-        <p>{event.description}</p>
-        
-        <p>STARTED: {formattedTime}</p>
-        <p>{event.duration}</p>
+        <div className="flex justify-between items-center mb-1">
+          <div>
+            <p>STARTED: {formattedTime}</p>
+          </div>
+          <div className="flex space-x-4">
+            <div className="h-55 w-62 bg-blue-800 border border-blue-800 px-2 py-1 rounded-lg transition-colors hover:bg-blue-600 hover:text-gray-100 uppercase">
+              
+              <h1 className="p-4 text-lg text-white">12</h1>
+            </div>
+            <div className="h-55 w-62 bg-blue-800 border border-blue-800 px-2 py-1 rounded-lg transition-colors hover:bg-blue-600 hover:text-gray-100 uppercase">
+            <h1 className="p-4 text-lg text-white">24</h1>
+            </div>
+          </div>
+        </div>
 
-        <div className="flex justify-between mt-4 mb-4">
+        <div className="flex justify-between mt-4">
           <div>
             <p className="font-semibold text-gray-800 text-xl">H: 5</p>
           </div>
@@ -48,16 +61,6 @@ const EventCard = ({ event }) => {
           <button className="h-30 w-155 bg-blue-800 text-white text-lg border border-blue-800 px-2 py-1 rounded-lg transition-colors hover:bg-blue-600 hover:text-gray-100 uppercase">
             Manage Event
           </button>
-        </div>
-        <div>
-          <h3>Guests:</h3>
-          {event.guests &&
-            event.guests.map((guest) => (
-              <div key={guest.id}>
-                <p>{guest.name}</p>
-                <p>{guest.email}</p>
-              </div>
-            ))}
         </div>
       </div>
     </Link>

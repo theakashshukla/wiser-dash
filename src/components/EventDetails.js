@@ -12,7 +12,7 @@ const EventDetails = () => {
       title: "Event 1",
       description: "Description 1",
       date: "2023-11-01",
-      time: "10:00",
+      time: "19:00",
       duration: 60,
       guests: [
         {
@@ -67,7 +67,7 @@ const EventDetails = () => {
     return <div>Event not found</div>;
   }
 
-  const eventDate = new Date(event.date);
+  const eventDate = new Date(`${event.date} ${event.time}`);
 
   // Format the date and time
   const formattedDate = eventDate.toLocaleDateString("en-US", {
@@ -90,27 +90,37 @@ const EventDetails = () => {
         <div className="flex justify-between">
           <div>
             <p className="font-semibold text-gray-600 text-base">
-              Date: {formattedDate}
+              {formattedDate}
             </p>
           </div>
           <div>
             <p className="font-semibold text-gray-600 text-base">
-              Time: {formattedTime}
+              STARTED: {formattedTime}
             </p>
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-1">
           <div>
-            <p className="font-semibold text-blue-500 text-xl">
-              {event.title}
-            </p>
+            <p className="font-semibold text-blue-500 text-xl">{event.title}</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-600 text-xl">H: 5</p>
+            <p className="font-semibold text-gray-800 text-xl">H: 5</p>
           </div>
         </div>
-        <p>{event.description}</p>
+        <div className="flex justify-between mt-4 mb-4">
+          <button className="h-25 w-105 bg-blue-800 text-white text-sm border border-blue-800 px-2 py-1 rounded-lg transition-colors hover:bg-blue-600 hover:text-gray-100 uppercase">
+            Statistics
+          </button>
+          <button className="h-25 w-105 bg-gray-300 text-gray-600 text-sm border border-blue-800 px-2 py-1 rounded-lg transition-colors hover:bg-gray-400 hover:text-gray-800 uppercase">
+            Event Details
+          </button>
+          <button className="h-25 w-105 bg-gray-300 text-gray-600 text-sm border border-blue-800 px-2 py-1 rounded-lg transition-colors hover:bg-gray-400 hover:text-gray-800 uppercase">
+            Host Details
+          </button>
+        </div>
 
+        <div className="my-1 border-t border-b border-gray-300"></div>
+        <p>{event.description}</p>
         <p>Duration: {event.duration} minutes</p>
         <div>
           <h3>Guests:</h3>

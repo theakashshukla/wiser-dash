@@ -9,14 +9,8 @@ const EventCardList = () => {
       description: "Description 1",
       date: "2023-11-01",
       time: "19:00",
-      duration: 60,
-      guests: [
-        {
-          id: 1,
-          name: "Guest 1",
-          email: "test@gmail.com",
-        },
-      ],
+      count: 80,
+      minCount: 90,
     },
     {
       id: 2,
@@ -24,19 +18,8 @@ const EventCardList = () => {
       description: "Description 2",
       date: "2023-08-02",
       time: "5:00",
-      duration: 60,
-      guests: [
-        {
-          id: 1,
-          name: "Guest 1",
-          email: "test2@gmail.com",
-        },
-        {
-          id: 2,
-          name: "Guest 2",
-          email: "test3@gmail.com",
-        },
-      ],
+      count: 70,
+      minCount: 60,
     },
     {
       id: 3,
@@ -44,14 +27,8 @@ const EventCardList = () => {
       description: "Description 2",
       date: "2023-12-02",
       time: "10:00",
-      duration: 60,
-      guests: [
-        {
-          id: 1,
-          name: "Guest 1",
-          email: "test2@gmail.com",
-        },
-      ],
+      count: 60,
+      minCount: 40,
     },
   ];
   return (

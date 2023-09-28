@@ -37,11 +37,11 @@ const EventCard = ({ event }) => {
           </div>
           <div className="flex space-x-4">
             <div className="h-55 w-62 bg-blue-800 border border-blue-800 px-2 py-1 rounded-lg transition-colors hover:bg-blue-600 hover:text-gray-100 uppercase">
-              
-              <h1 className="p-4 text-lg text-white">12</h1>
+              <h1 className="p-4 text-lg text-white">{event.minCount}</h1>
             </div>
+
             <div className="h-55 w-62 bg-blue-800 border border-blue-800 px-2 py-1 rounded-lg transition-colors hover:bg-blue-600 hover:text-gray-100 uppercase">
-            <h1 className="p-4 text-lg text-white">24</h1>
+              <h1 className="p-4 text-lg text-white">{event.count}</h1>
             </div>
           </div>
         </div>

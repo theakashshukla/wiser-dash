@@ -42,6 +42,21 @@ const EventDetails = () => {
         },
       ],
     },
+    {
+      id: 3,
+      title: "Event 3",
+      description: "Description 2",
+      date: "2021-08-02",
+      time: "10:00",
+      duration: 60,
+      guests: [
+        {
+          id: 1,
+          name: "Guest 1",
+          email: "test2@gmail.com",
+        },
+      ],
+    },
   ];
 
   // Find the event that matches the id from the URL
@@ -52,12 +67,24 @@ const EventDetails = () => {
     return <div>Event not found</div>;
   }
   return (
-    <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-      <div className="w-74 h-196 border border-gray-300 rounded-lg p-4">
+    <div className="container mx-auto p-4 mb-9">
+      <h1 className="text-blue-800 text-4xl font-bold mb-4">Ongoing Events</h1>
+      <div>
+        <div className="flex justify-between">
+          <div>
+            <p className="font-semibold text-gray-600 text-base">
+              Date: {event.date}
+            </p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-600 text-base">
+              Time: {event.time}
+            </p>
+          </div>
+        </div>
         <h1>{event.title}</h1>
         <p>{event.description}</p>
-        <p>Date: {event.date}</p>
-        <p>Time: {event.time}</p>
+        
         <p>Duration: {event.duration} minutes</p>
         <div>
           <h3>Guests:</h3>

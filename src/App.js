@@ -11,12 +11,14 @@ import "./App.css";
 function App() {
   return (
     <Router>
+      
       <Header />
       <Routes>
         <Route
           path="/"
           element={
-            <div className="container mx-auto rounded-xl shadow border p-4">
+            <div className="container mx-auto p-4 mb-9">
+              <h1 className="text-blue-800 text-4xl font-bold mb-4">Ongoing Events</h1>
               <EventCardList />
             </div>
           }
@@ -24,6 +26,7 @@ function App() {
         <Route path="/event/:id" element={<EventDetails />} />
       </Routes>
       <BottomNavigation />
+      
     </Router>
   );
 }

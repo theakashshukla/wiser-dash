@@ -38,6 +38,21 @@ const EventCardList = () => {
         },
       ],
     },
+    {
+      id: 3,
+      title: "Event 3",
+      description: "Description 2",
+      date: "2021-08-02",
+      time: "10:00",
+      duration: 60,
+      guests: [
+        {
+          id: 1,
+          name: "Guest 1",
+          email: "test2@gmail.com",
+        },
+      ],
+    },
   ];
 
   return (
